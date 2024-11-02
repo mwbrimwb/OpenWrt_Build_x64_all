@@ -5,16 +5,16 @@
 # 不要一下就拉取别人一个插件包N多插件的，多了没用，增加编译错误，自己需要的才好
 
 #添加luci-app-bypass插件
-git clone -b bypass https://github.com/shidahuilang/openwrt-package.git package/luci-app-bypass
+#git clone -b bypass https://github.com/shidahuilang/openwrt-package.git package/luci-app-bypass
 
 #添加luci-app-daed插件
-git clone -b master --depth 1 https://github.com/QiuSimons/luci-app-daed package/luci-app-daed
+#git clone -b master --depth 1 https://github.com/QiuSimons/luci-app-daed package/luci-app-daed
 
 #添加luci-app-homeproxy插件
-git clone https://github.com/douglarek/luci-app-homeproxy.git package/luci-app-homeproxy
+#git clone https://github.com/douglarek/luci-app-homeproxy.git package/luci-app-homeproxy
 
 #添加luci-app-mosdns插件
-git clone -b v5-lua --depth 1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
+#git clone -b v5-lua --depth 1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
 #添加CPU使用率、编译作者、固件下载地址
 sed -i '/<tr><td width="33%"><%:CPU usage/a <tr><td width="33%"><%:Compiler author%></td><td><a target="_blank" href="https://wp.gxnas.com">【GXNAS博客】https://wp.gxnas.com</a></td></tr>' package/lean/autocore/files/x86/index.htm
@@ -29,7 +29,7 @@ sed -i '9a\msgstr "固件出处"' feeds/luci/modules/luci-base/po/zh-cn/base.po
 sed -i '10a \\' feeds/luci/modules/luci-base/po/zh-cn/base.po
 
 # 后台IP设置
-export Ipv4_ipaddr="192.168.1.1"             # 修改openwrt后台地址(填0为关闭)
+export Ipv4_ipaddr="10.10.1.250"             # 修改openwrt后台地址(填0为关闭)
 export Netmask_netm="255.255.255.0"          # IPv4 子网掩码（默认：255.255.255.0）(填0为不作修改)
 export Op_name="OpenWrt-GXNAS"               # 修改主机名称为OpenWrt-123(填0为不作修改)
 
